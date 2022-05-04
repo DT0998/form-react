@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import { useEffect } from "react";
 
 const SimpleInput = (props) => {
@@ -28,7 +28,11 @@ const SimpleInput = (props) => {
     // const enteredValue = nameInputRef.current.value;
     // reset value
     // nameInputRef.current.value='' => not ideal,dont manipulate the dom
+    if(!enteredNameIsValid){
+      return ;
+    }
     setEnteredName("");
+    setEnteredNameIsTouched(false)
   };
 
   const nameInputClasses = nameInputIsInvalid
