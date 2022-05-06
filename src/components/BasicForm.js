@@ -35,7 +35,7 @@ const BasicForm = (props) => {
   return (
     <form>
       <div className="control-group">
-        <div className="form-control">
+        <div className={ErrorClasses}>
           <label htmlFor="name">First Name</label>
           <input
             type="text"
@@ -45,12 +45,12 @@ const BasicForm = (props) => {
             onBlur={firstNameBlurHandler}
           />
         </div>
-        <div className="form-control">
+        <div className={ErrorClasses}>
           <label htmlFor="name">Last Name</label>
           <input type="text" id="name" value={lastNameValue} onChange={lastNameChangeHandler} onBlur={lastNameBlurHandler} />
         </div>
       </div>
-      <div className="form-control">
+      <div className={ErrorClasses}>
         <label htmlFor="name">E-Mail Address</label>
         <input type="text" id="name" value={emailValue} onChange={emailChangeHandler} onBlur={emailBlurHandler}/>
       </div>
