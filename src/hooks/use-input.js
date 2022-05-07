@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 
 const initialInputState = {
-  value: "",
+  value: '',
   isTouched: false,
 };
 
@@ -10,10 +10,10 @@ const inputStateReducer = (state, action) => {
     return { value: action.value, isTouched: state.isTouched };
   }
   if (action.type === "BLUR") {
-    return { isTouched: true };
+    return { isTouched: true,value:state.value };
   }
   if (action.type === "RESET") {
-    return { isTouched: false, value: "" };
+    return { isTouched: false, value:''};
   }
   return inputStateReducer;
 };
